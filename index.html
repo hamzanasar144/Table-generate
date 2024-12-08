@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TABLE GENERATE</title>
+    <style>
+        td, th{
+            border: 5px solid rgb(216, 18, 18);
+            font-size: 20px;
+            padding: 5px 10px;
+            color: blue;
+            align-items: center;
+        }
+        h1{
+          color: lawngreen;
+          text-shadow: 3px 3px gray;
+          text-decoration: underline;
+          font-size: 50px;
+        }
+        body{
+          text-align: center;
+          background-color: darkcyan;
+        }
+        #tableName:hover{
+         
+          background-color: rgb(0, 238, 255);
+          color: red; 
+          border-radius: 5px;
+
+        }
+        #tableCount:hover{
+          background-color: rgb(0, 238, 255);
+          color: red;
+          border-radius: 5px;
+          
+        }
+        .bt{
+          border-radius: 20px;
+          color: darkcyan;
+        }
+        .bt:hover{
+          background-color: lightcoral;
+          color: skyblue;
+        }
+    </style>
+</head>
+<body>
+<h1>
+  TABLE GENERATE
+</h1>
+    <input type="number" placeholder="Enter Table Name" id="tableName">
+    <br>
+    <br>
+    <br>
+    <input type="number" placeholder="Enter Table Count" id="tableCount">
+    <br>
+    <br>
+     <br>
+    <br>
+    <button onclick="tableGenerate()" class="bt">GENERATE TABLE</button>
+
+    <table id="mathTable">
+    </table>
+
+    <script>
+        function tableGenerate(){
+            let tableName = Number(document.getElementById("tableName").value)
+            let tableCount = Number(document.getElementById("tableCount").value)
+            let tr = ""
+            ///// LOOP /////
+            for(let i=1; i <= tableCount; i++){
+                tr += 
+                    `<tr>
+                        <td>${tableName}</td>
+                        <td>x</td>
+                        <td>${i}</td>
+                        <td>=</td>
+                        <td>${tableName * i}</td>
+                    </tr>`
+            }
+            ///// LOOP /////
+            document.getElementById("mathTable").innerHTML = tr
+        }
+    </script>
+</body>
+</html>
