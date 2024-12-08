@@ -1,0 +1,38 @@
+td, th{
+    border: 5px solid rgb(216, 18, 18);
+    font-size: 20px;
+    padding: 5px 10px;
+    color: blue;
+    align-items: center;
+}
+h1{
+  color: lawngreen;
+  text-shadow: 3px 3px gray;
+  text-decoration: underline;
+  font-size: 50px;
+}
+body{
+  text-align: center;
+  background-color: darkcyan;
+}
+#tableName:hover{
+ 
+  background-color: rgb(0, 238, 255);
+  color: red; 
+  border-radius: 5px;
+
+}
+#tableCount:hover{
+  background-color: rgb(0, 238, 255);
+  color: red;
+  border-radius: 5px;
+  
+}
+.bt{
+  border-radius: 20px;
+  color: darkcyan;
+}
+.bt:hover{
+  background-color: lightcoral;
+  color: skyblue;
+}
